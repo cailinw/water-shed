@@ -1,10 +1,8 @@
 # Water Shed
 
 #### About the game
-Water Game is a game to promote awareness about the impact of our personal water footprints  
-on the environment and to challenge players to make choices in their daily lives to lower  
-their water footprints. We often don't realize that many items/choices could have hidden or  
-unexpected water footprints.
+Water Shed is a game to promote awareness about the impact of our personal water footprint on the environment. It  challenges players to make choices in their daily lives to lower their water footprint. We often don't realize that  
+many items/choices could have hidden or unexpected water footprints.
 
 #### Setting up game
 
