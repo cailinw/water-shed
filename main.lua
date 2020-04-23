@@ -842,7 +842,7 @@ function love.draw(dt)
     -- love.graphics.setColor(40, 40, 40)
     love.graphics.setColor(40/255, 40/255, 40/255)
     love.graphics.setFont(small_font)
-    love.graphics.print("Project Manager Cailin Winston", width/2 - small_font:getWidth("Project Manager: Cailin Winston")/2, height/2 - small_font:getHeight() - 100)
+    love.graphics.print("Project Manager: Cailin Winston", width/2 - small_font:getWidth("Project Manager: Cailin Winston")/2, height/2 - small_font:getHeight() - 100)
     love.graphics.print("Game Development: Caleb Winston (https://github.com/calebwin)", width/2 - small_font:getWidth("Game Development: Caleb Winston (https://github.com/calebwin)")/2, height/2 - small_font:getHeight())
     love.graphics.print("Graphics/Design: -----------", width/2 - small_font:getWidth("Graphics/Design: -----------")/2, height/2 - small_font:getHeight() + 100)
   end
