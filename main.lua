@@ -499,8 +499,14 @@ function love.update(dt)
           io.output(pledges_file)
           io.write(os.date("%c") .. " play again button pressed", "\n")
           io.close(pledges_file)
+        elseif mouse.y > width / 2 then
+          transition_to("acknowledgements")
         end
       end
+    end
+  elseif curr_page == "acknowledgements" then
+    if is_mouse_clicked then
+      transition_to("main")
     end
   end
   
@@ -544,7 +550,6 @@ function love.draw(dt)
     love.graphics.setFont(smallest_font)
     love.graphics.setColor(0, 0, 0, 80)
     --love.graphics.setColor(50/255, 50/255, 50/255)
-    love.graphics.print("Game development by Caleb Winston (github.com/calebwin)", 10, 10)
     
   elseif curr_page == "phase_a_intro" then
     -- love.graphics.setBackgroundColor(158, 193, 227)
@@ -829,6 +834,17 @@ function love.draw(dt)
     love.graphics.setColor(50*COLOR_VALUE_FACTOR/255, 50*COLOR_VALUE_FACTOR/255, 50*COLOR_VALUE_FACTOR/255, 100*COLOR_VALUE_FACTOR/255)
     love.graphics.setFont(regular_font)
     love.graphics.print("play again", 50, height - regular_font:getHeight() - 10)
+    love.graphics.print("acknowledgements", width - 50 - regular_font:getWidth("acknowledgements"), height - regular_font:getHeight() - 10)
+  elseif curr_page == "acknowledgements" then
+    -- love.graphics.setBackgroundColor(158, 193, 227)
+    love.graphics.setBackgroundColor(158/255, 193/255, 227/255)
+
+    -- love.graphics.setColor(40, 40, 40)
+    love.graphics.setColor(40/255, 40/255, 40/255)
+    love.graphics.setFont(small_font)
+    love.graphics.print("Project Manager Cailin Winston", width/2 - small_font:getWidth("Project Manager: Cailin Winston")/2, height/2 - small_font:getHeight() - 100)
+    love.graphics.print("Game Development: Caleb Winston (https://github.com/calebwin)", width/2 - small_font:getWidth("Game Development: Caleb Winston (https://github.com/calebwin)")/2, height/2 - small_font:getHeight())
+    love.graphics.print("Graphics/Design: -----------", width/2 - small_font:getWidth("Graphics/Design: -----------")/2, height/2 - small_font:getHeight() + 100)
   end
   
   -- draw transitions
